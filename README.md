@@ -22,8 +22,8 @@ Gestión sigue corriendo contra sus tablas viejas y nadie nota nada.
 ## Desplegar
 
 1. Clonar en `/home/devn8n/chat`.
-2. Crear `.env` con `DB_*`, `JWT_SECRET` (el MISMO que usa Gestión: si no
+2. Crear `.env` con `DB_*` (**`DB_NAME=AUD` en MAYUSCULAS** — la minuscula no existe), `JWT_SECRET` (el MISMO que usa Gestión: si no
    coincide, los tokens no validan y todo responde 401).
-3. Aplicar `service/sql/01_schema_chat.sql` en la base `aud`.
+3. Aplicar `service/sql/01_schema_chat.sql` en la base `AUD`. (hecho 2026-07-20)
 4. Pegar `nginx.chat.conf` DENTRO del `server {}` de `n8n.datazentrika.com`.
 5. `docker compose up -d --build`
