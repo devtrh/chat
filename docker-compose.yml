@@ -12,7 +12,7 @@ services:
     # 2026-07-20: 23 caracteres llegaron como 19). Con env_file los valores
     # viajan literales.
     env_file:
-      - .env
+      - chat.env
     environment:
       - PORT=4010
       - ADJUNTOS_PATH=/adjuntos
