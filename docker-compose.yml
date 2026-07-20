@@ -15,5 +15,5 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - PORT=4010
       - ADJUNTOS_PATH=/adjuntos
-      - MAX_UPLOAD_MB=50
+      - MAX_UPLOAD_MB=100
     restart: always
