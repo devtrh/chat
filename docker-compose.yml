@@ -1,0 +1,19 @@
+services:
+  chat-service:
+    build: ./service
+    container_name: chat-service
+    ports:
+      - "127.0.0.1:4010:4010"     # solo local; nginx hace de puerta
+    volumes:
+      - ./adjuntos:/adjuntos      # mismo patrón que ./CARGAS en Gestión
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - JWT_SECRET=${JWT_SECRET}
+      - PORT=4010
+      - ADJUNTOS_PATH=/adjuntos
+      - MAX_UPLOAD_MB=50
+    restart: always
