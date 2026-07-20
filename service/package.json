@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "node tests/salas.test.js && node tests/adjuntos.test.js && node tests/auth.test.js"
+    "test": "node tests/salas.test.js && node tests/adjuntos.test.js && node tests/auth.test.js && node tests/migracion.test.js"
   },
   "dependencies": {
     "express": "^4.19.2",
